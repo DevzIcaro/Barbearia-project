@@ -41,10 +41,9 @@ export const InputEmailForm = ({
   }
 
   return (
-    <label className={twMerge("")}>
-      <input type="text" className="" placeholder="Digite seu E-mail" {...configEmailField}>
-        email
-      </input>
+    <label className={twMerge("flex flex-col font-semiboold w-full px-4 font-semibold")}>
+      E-mail:
+      <input type="text" className="px-2 py-2 rounded-xl" placeholder="Digite seu E-mail" {...configEmailField} />
     </label>
   );
 };

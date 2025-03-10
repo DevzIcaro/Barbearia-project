@@ -41,8 +41,9 @@ export const InputPasswordForm = ({
   }
 
   return (
-    <label className={twMerge("")}>
-      <input type="password" {...configPasswordField} />
+    <label className={twMerge("flex flex-col w-full px-4 font-semibold")}>
+      Senha:
+      <input type="password" {...configPasswordField} className="px-4 py-2 rounded-xl" />
     </label>
   )
 }
