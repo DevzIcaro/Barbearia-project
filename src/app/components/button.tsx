@@ -83,7 +83,7 @@ export const Button = ({
 
   return (
     <button
-      className={twMerge(buttonStyle, "")} type="submit" {...props}
+      className={twMerge(buttonStyle, "hover:bg-[#422530] ease-in-out")} type="submit" {...props}
     >
       <div className="w-full flex justify-center items-center">
         {loading && <span className="animate-spin"></span>}

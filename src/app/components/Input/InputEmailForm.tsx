@@ -42,7 +42,9 @@ export const InputEmailForm = ({
 
   return (
     <label className={twMerge("flex flex-col font-semiboold w-full px-4 font-semibold")}>
-      E-mail:
+      <div className="flex justify-center m-2">
+        {label}
+      </div>
       <input type="text" className="px-2 py-2 rounded-xl" placeholder="Digite seu E-mail" {...configEmailField} />
     </label>
   );
