@@ -3,6 +3,7 @@ import { TypeJob } from "@/app/modules/createaccount/enums";
 import { InputPasswordForm } from "@/components/Input/InputPasswordForm";
 import { InputSelectForm } from "@/components/Input/InputSelectForm";
 import { InputText } from "@/components/Input/InputTextForm";
+import { Select } from "@radix-ui/react-select";
 import { Form, Formik } from "formik";
 import { useState } from "react";
 import { HiUserAdd } from "react-icons/hi";
@@ -83,6 +84,12 @@ export default function CreateAccount() {
 
                 <div className="">
                   {/* Seção com Radio para confirmar ou não a existência de funcionário */}
+                  <InputSelectForm
+                    items={[...TypeJob]}
+                    name="Barbeiro"
+                    type="text"
+                  >
+                  </InputSelectForm>
                 </div>
 
               </Form>
