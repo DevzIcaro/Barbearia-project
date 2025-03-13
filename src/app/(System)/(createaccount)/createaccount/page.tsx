@@ -1,6 +1,8 @@
 "use client"
-import { InputPasswordForm } from "@/app/components/Input/InputPasswordForm";
-import { InputText } from "@/app/components/Input/InputTextForm";
+import { TypeJob } from "@/app/modules/createaccount/enums";
+import { InputPasswordForm } from "@/components/Input/InputPasswordForm";
+import { InputSelectForm } from "@/components/Input/InputSelectForm";
+import { InputText } from "@/components/Input/InputTextForm";
 import { Form, Formik } from "formik";
 import { useState } from "react";
 import { HiUserAdd } from "react-icons/hi";
@@ -22,7 +24,7 @@ export default function CreateAccount() {
   })
 
   return (
-    <div className="bg-[#210210] h-[130px] grid grid-cols-3 grid-rows-5">
+    <div className="bg-[#210210] h-[1300px] grid grid-cols-3 grid-rows-5">
       <div className="grid col-start-2 row-start-1 mt-24 ">
         <div className=" bg-[#FFF] h-[900px] rounded-3xl">
           <div className="grid grid-cols-3 grid-rows-3 m-3">
@@ -73,6 +75,10 @@ export default function CreateAccount() {
                   {/* Select de Profissão ?Quais profissões colocar, talvez trocar o campo?
 
                   */}
+                  <InputSelectForm
+                    items={TypeJob}
+                    name=""
+                    type="text"></InputSelectForm>
                 </div>
 
                 <div className="">

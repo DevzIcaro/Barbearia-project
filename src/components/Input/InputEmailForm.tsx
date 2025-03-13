@@ -10,6 +10,7 @@ interface InputEmailFormProps extends InputHTMLAttributes<HTMLInputElement> {
   error?: boolean;
   label?: string;
   disabled?: boolean;
+
 }
 
 export const InputEmailForm = ({

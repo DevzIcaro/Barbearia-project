@@ -9,7 +9,7 @@ interface ButtonProps {
   variant?: 'outline' | 'contained';
   color?: 'info' | 'sucess' | 'warning' | 'error';
   children?: ReactNode;
-  type: 'submit'
+  type: 'submit';
   label: string;
   classname: string;
 }

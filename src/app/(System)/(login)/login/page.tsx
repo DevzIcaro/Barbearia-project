@@ -1,9 +1,9 @@
 "use client"
 
-import { Button } from "@/app/components/button";
-import { DefaultDivision } from "@/app/components/divisions/divisondefault";
-import { InputEmailForm } from "@/app/components/Input/InputEmailForm";
-import { InputPasswordForm } from "@/app/components/Input/InputPasswordForm";
+import { Button } from "@/components/button";
+import { DefaultDivision } from "@/components/divisions/divisondefault";
+import { InputEmailForm } from "@/components/Input/InputEmailForm";
+import { InputPasswordForm } from "@/components/Input/InputPasswordForm";
 import { Form, Formik } from "formik";
 import { useState } from "react";
 import { TbUserFilled } from "react-icons/tb";
