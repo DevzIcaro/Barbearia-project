@@ -1,8 +1,10 @@
 "use client"
 import { TypeJob } from "@/app/modules/createaccount/enums";
 import { InputPasswordForm } from "@/components/Input/InputPasswordForm";
+import { RadioSelect } from "@/components/Input/InputRadioForm";
 import { InputSelectForm } from "@/components/Input/InputSelectForm";
 import { InputText } from "@/components/Input/InputTextForm";
+import { RadioGroup, RadioGroupItem } from "@radix-ui/react-radio-group";
 import { Select } from "@radix-ui/react-select";
 import { Form, Formik } from "formik";
 import { useState } from "react";
@@ -26,7 +28,7 @@ export default function CreateAccount() {
 
   return (
     <div className="bg-[#210210] h-[1300px] grid grid-cols-3 grid-rows-5">
-      <div className="grid col-start-2 row-start-1 mt-24 ">
+      <div className="col-start-2 row-start-1 mt-24 ">
         <div className=" bg-[#FFF] h-[900px] rounded-3xl">
           <div className="grid grid-cols-3 grid-rows-3 m-3">
             <div className="col-start-2 flex items-center justify-center">
@@ -72,24 +74,39 @@ export default function CreateAccount() {
                   </InputPasswordForm>
                 </div>
 
-                <div className="bg-slate-400 max-w-[300px] rounded-xl p-4 m-8">
-                  {/* Select de Profissão ?Quais profissões colocar, talvez trocar o campo?
-
-                  */}
+                <div className="flex flex-col justify-center max-w-[300px] rounded-xl mt-10">
+                  <span className="flex justify-center mb-4">Diga sua área</span>
                   <InputSelectForm
-                    items={TypeJob}
-                    name=""
-                    type="text"></InputSelectForm>
+                    disabled={false}
+                    items={[...TypeJob]}
+                    name="SelectJob"
+                    type="text"
+                    className="bg-slate-700-100"
+                  >
+                  </InputSelectForm>
                 </div>
 
                 <div className="">
                   {/* Seção com Radio para confirmar ou não a existência de funcionário */}
-                  <InputSelectForm
-                    items={[...TypeJob]}
-                    name="Barbeiro"
-                    type="text"
-                  >
-                  </InputSelectForm>
+                  <RadioSelect
+                    // setValues={ }
+                    className="flex flex-col justify-center "
+                    checkbox={true}
+                    options={[
+                      {
+                        label: "eae",
+                        value: '1'
+                      },
+                      {
+                        label: "eae2",
+                        value: '2'
+                      },
+                      {
+                        label: "eae3",
+                        value: '3'
+                      },
+                    ]}
+                  />
                 </div>
 
               </Form>
