@@ -46,7 +46,7 @@ export const InputEmailForm = ({
       <div className="flex justify-center m-2">
         {label}
       </div>
-      <input type="text" className="px-2 py-2 rounded-xl" placeholder="Digite seu E-mail" {...configEmailField} />
+      <input type="text" className="px-2 py-2 rounded-xl w-full text-sm hover:border-black focus:border-2 " placeholder="Digite seu E-mail" {...configEmailField} />
     </label>
   );
 };

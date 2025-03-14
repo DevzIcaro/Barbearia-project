@@ -45,7 +45,7 @@ export const InputPasswordForm = ({
       <div className="flex justify-center m-2">
         {label}
       </div>
-      <input type="password" className="px-4 py-2 rounded-xl " {...configPasswordField} {...props} {...field} />
+      <input type="password" className="px-4 py-2 rounded-xl w-full text-sm hover:border-black focus:border-2  " {...configPasswordField} {...props} {...field} />
     </label>
   )
 }
